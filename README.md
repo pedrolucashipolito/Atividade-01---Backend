@@ -2,7 +2,7 @@
 erDiagram
 
     USUARIO {
-        Long codigo PK
+        Long codigo
         String nome
         String email
         boolean ativo
@@ -11,7 +11,7 @@ erDiagram
     }
 
     APARELHO {
-        Long codigo PK
+        Long codigo
         String nome
         String tipo
         boolean disponivel
@@ -20,15 +20,15 @@ erDiagram
     }
 
     AGENDAMENTO {
-        Long codigo PK
+        Long codigo
         Date data
         String hora
         boolean ativo
         String observacao
-        Long usuario_id FK
-        Long aparelho_id FK
+        Long usuario_id
+        Long aparelho_id
     }
 
     USUARIO ||--o{ AGENDAMENTO : realiza
     APARELHO ||--o{ AGENDAMENTO : possui
-    ```
+```
